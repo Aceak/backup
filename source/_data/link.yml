@@ -1,0 +1,23 @@
+ - class_name: STxw系列
+   class_desc:
+   link_list:
+     - name: STの星屋
+       link: https://aceak.github.io
+       avatar: https://pic.imgdb.cn/item/6188b6a92ab3f51d91af3b9c.jpg
+       descr: STxw的高质量博客
+ - class_name: 友人
+   class_desc: 一些优质博客和网站
+   link_list:
+     - name: OneGO导航
+       link: https://ionego.net/
+       avatar: https://static.ionego.net/wp-content/uploads/2020/12/%E6%9C%AA%E6%A0%87%E9%A2%98-1-02.png
+       descr: 高质量网站导航
+     - name: 勿埋我心
+       link: https://www.qian.blue/
+       avatar: https://qiantigers.coding.net/p/pic/d/pic/git/raw/master/2020/9/1/20200901091558.png
+       descr: 勿埋我心的高质量干货教程
+     - name: 一木收录阁
+       link: https://ys.yimuapp.cn/
+       avatar: https://ys.yimuapp.cn/wp-content/uploads/2021/08/360.png?x41491
+       descr: 网站博客收录平台
+            
