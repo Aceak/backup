@@ -197,7 +197,7 @@ toc:
 
 post_copyright:
   enable: true
-  decode: false
+  decode: true
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -431,7 +431,7 @@ footer:
   owner:
     enable: true
     since: 2021
-  custom_text: Hi, welcome to <a href="https://aceak.github.io/">STxw</a>!
+  custom_text: Hi, welcome to <a href="https://blog.stxwer.top/">STxw</a>!
   copyright: false # Copyright of theme and framework
 
 # Analysis
@@ -869,7 +869,8 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-     - <link rel="stylesheet" href="//at.alicdn.com/t/font_2839545_ptopx56fcs8.css">
+      - <link rel="stylesheet" href="//at.alicdn.com/t/font_2839545_ptopx56fcs8.css">
+      - <link rel="stylesheet" href="/css/custom/twikoo_beautify.css"  media="defer" onload="this.media='all'">
   bottom:
     # - <script src="xxxx"></script>
 
