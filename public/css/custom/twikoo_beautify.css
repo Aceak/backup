@@ -1,0 +1,12 @@
+/* 自定义twikoo评论输入框高度 */
+.tk-input[data-v-619b4c52] .el-textarea__inner {
+    height: 160px !important;
+}
+
+/* 作者标美化 */
+.tk-tag-green {
+    border-radius: 12px !important;
+    border: 0 solid #e1f3d8 !important;
+    font-size: .5rem !important;
+    background-color: #67c23a21 !important;
+}

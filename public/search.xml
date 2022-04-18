@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>浅谈主动攻击</title>
+      <link href="/2021/10/24/Attack/"/>
+      <url>/2021/10/24/Attack/</url>
+      
+        <content type="html"><![CDATA[<h1 id="主动攻击"><a href="#主动攻击" class="headerlink" title="主动攻击"></a><strong>主动攻击</strong></h1><h2 id="0x00-定义："><a href="#0x00-定义：" class="headerlink" title="0x00 定义："></a><strong>0x00 定义：</strong></h2><p>主动攻击包含攻击者访问他所需信息的故意行为。比如远程登录到指定机器的端口25找出公司运行的邮件服务器的信息；伪造无效IP地址去连接服务器，使接受到错误IP地址的系统浪费时间去连接哪个非法地址。攻击者是在主动地做一些不利于你或你的公司系统的事情。<br>主动攻击包括拒绝服务攻击（DoS）、分布式拒绝服务（DDos）、信息篡改、资源使用、欺骗、伪装、重放等攻击方法。</p><h2 id="0x01-分类："><a href="#0x01-分类：" class="headerlink" title="0x01 分类："></a><strong>0x01 分类：</strong></h2><p>主动攻击包含对数据流的某些修改，或者生成一个假的数据流。它可分为五类：  </p><h3 id="伪装"><a href="#伪装" class="headerlink" title="伪装"></a><strong>伪装</strong></h3><p>伪装是一个实体假装成另外一个实体。伪装攻击往往连同另一类主动攻击一起进行。假如，身份鉴别的序列被捕获，并在有效地身份鉴别发生时做出回答，有可能使具有很少特权的实体得到额外的特权，这样不具有这些特权的人获得了这些特权。  </p><h3 id="回答（重放）"><a href="#回答（重放）" class="headerlink" title="回答（重放）"></a><strong>回答（重放）</strong></h3><p>回答攻击包含数据单元的被动捕获，随之再重传这些数据，从而产生一个非授权的效果。  </p><h3 id="修改报文"><a href="#修改报文" class="headerlink" title="修改报文"></a><strong>修改报文</strong></h3><p>修改报文攻击意味着合法报文的某些部分已被修改，或者报文的延迟和重新排序，从而产生非授权的效果。  </p><h3 id="拒绝服务（DoS）"><a href="#拒绝服务（DoS）" class="headerlink" title="拒绝服务（DoS）"></a><strong>拒绝服务（DoS）</strong></h3><p>DoS攻击是指利用合理的服务请求来占用过多的服务资源，从而使合法的用户得不到服务响应。这种攻击行为使网站服务器充斥大量要求回复的信息，消耗网络带宽或系统资源，导致网络或系统不胜负荷以至于瘫痪而停正提供正常的网络服务。<br>拒绝服务攻击是阻止或禁止通信设施的正常使用和管理。这种攻击可能针对专门的目标（如安全审计服务），抑制所有报文直接送到目的站；也可能破坏整个网络，使网络不可用或网络超负荷，从而降低网络性能。<br>主动攻击和被动攻击具有相反的特性。被动攻击难以检测出来，然而有阻止其成功的方法。而主动攻击难以绝对地阻止，因为要做到这些，就要对所有通信设施、通路在任何时间进行完全的保护。因此，对主动攻击采取的方法，并从破坏中恢复。因此制止的效应也可能对防止破坏做出贡献。  </p><h3 id="分布式拒绝服务（DDoS）"><a href="#分布式拒绝服务（DDoS）" class="headerlink" title="分布式拒绝服务（DDoS）"></a><strong>分布式拒绝服务（DDoS）</strong></h3><p>分布式拒绝服务（洪水攻击）是在传统的Dos攻击基础上产生的一类攻击方式，它使许多分布的主机同时攻击一个目标，从而使目标瘫痪等。一个比较完善的DDos攻击体系分为四大部分：黑客，控制傀儡机，攻击傀儡机，受害者。最重要的是第二，三部分，分别用于控制和实际发起攻击。对于第四部分的受害者来说，DDos的实际攻击包是从第三部分的攻击傀儡机上发起的，第二部分只发布控制命令而不参加实际的攻击。主动攻击难以预防，但却容易检测，所以重点是在于检测并从破坏中回复。  </p><h2 id="0x02-攻击手段："><a href="#0x02-攻击手段：" class="headerlink" title="0x02 攻击手段："></a><strong>0x02 攻击手段：</strong></h2><p>网络攻击手段形式多样，将网络主动攻击分为以下六大类进行研究：</p><h3 id="探测型攻击"><a href="#探测型攻击" class="headerlink" title="探测型攻击"></a><strong>探测型攻击</strong></h3><p>通过各种扫描技术快速准确地获取敌方网络的重要信息，代表性的攻击手段有端口扫描、服务漏洞扫描和操作系统漏洞扫描。</p><h3 id="肢解型攻击"><a href="#肢解型攻击" class="headerlink" title="肢解型攻击"></a><strong>肢解型攻击</strong></h3><p>集中攻击敌方信息系统关键结点，如 FTP、WEB、DNS 和 E-Mail 服务器等，破坏敌方的信息集成，代表性的攻击手段有缓冲区溢出攻击和后门攻击。</p><h3 id="病毒型攻击"><a href="#病毒型攻击" class="headerlink" title="病毒型攻击"></a><strong>病毒型攻击</strong></h3><p>通过在敌方网络安置可控的病毒或恶意代码，在必要的时候引爆病毒或恶意代码，使敌方控制中心瘫痪，代表性的攻击手段有恶意代码的开发和注入技术。 </p><h3 id="内置型攻击"><a href="#内置型攻击" class="headerlink" title="内置型攻击"></a><strong>内置型攻击</strong></h3><p>深入敌方的网络内部，安置木马或者通过安装网络嗅探程序，源源不断地向我方提供敌方的信息情报，代表性的攻击手段有远程控制攻击和TCP劫持。  </p><h3 id="欺骗型攻击"><a href="#欺骗型攻击" class="headerlink" title="欺骗型攻击"></a><strong>欺骗型攻击</strong></h3><p>通过传输虚假的信息欺骗敌方，使敌方指挥系统对收到的信息真假难辨，无法决策，或者做出错误决策，代表性的攻击手段有IP欺骗攻击。</p><h3 id="阻塞型攻击"><a href="#阻塞型攻击" class="headerlink" title="阻塞型攻击"></a><strong>阻塞型攻击</strong></h3><p>阻塞敌方信息流，使敌方网络无法进行正常传输，代表性的攻击手段有DoS攻击和DDoS攻击。  </p><h2 id="0x03-响应技术："><a href="#0x03-响应技术：" class="headerlink" title="0x03 响应技术："></a><strong>0x03 响应技术：</strong></h2><p>主动攻击响应就是在入侵检测系统检测到攻击后，系统根据攻击类型自动选择预定义的响应措施来阻断当前的攻击，防止后续攻击的发生，以及进行攻击取证和对攻击所造成的破坏进行恢复。当前实际应用的主动响应技术非常有限，主要有以下三种：  </p><h3 id="ICMP不可达响应"><a href="#ICMP不可达响应" class="headerlink" title="ICMP不可达响应"></a><strong>ICMP不可达响应</strong></h3><p>ICMII，不可达响应就是在入侵检测系统检测到特定的攻击事件后，通过向被攻击主机或攻击源发送ICMP端口或目的不可达报文来阻断攻击。</p><h3 id="TCP-RST响应"><a href="#TCP-RST响应" class="headerlink" title="TCP-RST响应"></a><strong>TCP-RST响应</strong></h3><p>TCP-RST响应也称阻断会话响应。在入侵检测系统检测到特定的攻击事件后，通过阻断攻击者和受害者之间的TCP，会话来阻断攻击。这种阻断会话机制是入侵检测系统中使用最多的主动响应机制。</p><h3 id="防火墙联动响应"><a href="#防火墙联动响应" class="headerlink" title="防火墙联动响应"></a><strong>防火墙联动响应</strong></h3><p>防火墙联动响应就是当入侵检测系统检测到攻击事件后向防火墙发送规则用于阻断当前以及后续攻击。然而防火墙联动响应还处于简单的基于地址的包过滤阶段，这种联动方式对采取了IP地址欺骗的攻击毫无作用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+            <tag> 主动攻击 </tag>
+            
+            <tag> 网络攻击 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于DDoS攻击的一些小知识</title>
+      <link href="/2021/10/24/DDoS1/"/>
+      <url>/2021/10/24/DDoS1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="DDoS-攻击"><a href="#DDoS-攻击" class="headerlink" title="DDoS 攻击"></a><strong>DDoS 攻击</strong></h1><p>DDoS攻击是非常常见的一种攻击，根据最新的统计，2018年日均千亿次攻击，频繁程度让人瞠目。随着黑客技术的不断发展，DDoS攻击变得越来越简单和自动化，发动一次DDoS攻击并不需要太高的技术门槛，攻击流量也从最开始的10GB、90GB，逐渐扩大至300GB、400GB，如今已经以“T”级别来计算，DDoS攻击几乎在以飞跃式的速度增长。<br>几十年来，拒绝服务攻击一直是犯罪工具箱的一部分，而且只会变得越来越普遍和强大。</p><h2 id="什么是-DDoS-攻击"><a href="#什么是-DDoS-攻击" class="headerlink" title="什么是 DDoS 攻击?"></a><strong>什么是 DDoS 攻击?</strong></h2><p>分布式拒绝服务 ( DDoS ) 攻击是指攻击者通过攻击的方式试图使服务无法交付。这可以通过阻止对几乎任何设施的访问来实现：服务器、设备、服务、网络、应用程序，甚至应用程序中的特定事务。在 DoS 攻击中，它是一个发送恶意数据或请求的系统 ; DDoS攻击来自多个系统。  </p><p>通常，这些攻击通过淹没具有数据请求的系统来工作。这可能是通过向web服务器发送大量请求来攻击页面，导致页面在请求下崩溃;也可能是向数据库发送大量查询。其结果是使得可用的internet带宽、CPU和RAM容量变得不堪重负。  </p><p>其影响可能是小到服务中断，大到整个网站、应用程序甚至整个业务离线。</p><h2 id="DDoS-攻击的症状"><a href="#DDoS-攻击的症状" class="headerlink" title="DDoS 攻击的症状"></a><strong>DDoS 攻击的症状</strong></h2><p>DDoS攻击看起来像许多可以导致可用性问题的非恶意的东西——比如服务器或系统宕机，来自合法用户的合法请求太多，甚至是电缆被切断。它通常需要流量分析来确定到底发生了什么。</p><h2 id="那些著名的-DDoS-攻击事件"><a href="#那些著名的-DDoS-攻击事件" class="headerlink" title="那些著名的 DDoS 攻击事件"></a><strong>那些著名的 DDoS 攻击事件</strong></h2><p>2000年初，加拿大高中生Michael Calce(又名MafiaBoy)对雅虎发动攻击!通过分布式拒绝服务(DDoS)攻击，设法关闭了当时领先的web引擎之一。在接下来的一周中，Calce瞄准并成功破坏了亚马逊，CNN和eBay等其他网站。这是一场永久改变如何看待拒绝服务攻击的攻击事件。</p><p>当然，这不是第一次DDoS攻击，但这一系列高度公开和成功的攻击，将拒绝服务攻击从新奇和小麻烦转变为CISO和CIO心目中永远的强大业务破坏者。<br>从那时起，DDoS攻击已经成为一种非常常见的威胁，因为它们通常被用来实施报复，进行敲诈勒索，作为一种在线行动主义的手段，甚至用于发动网络战。  </p><p>多年来，DDoS攻击也变得更具威胁性。在20世纪90年代中期，一次攻击可能包括每秒发送150个请求——这足以摧毁许多系统。现在它们可以超过1000 Gbps，庞大的僵尸网络规模在很大程度上也推动了这一点。  </p><p>2016年10月，互联网基础设施服务提供商Dyn DNS(现在的Oracle DYN)被数以千万计的IP地址的DNS查询浪潮所困扰。通过Mirai僵尸网络执行的这次攻击据报道感染了超过10万台物联网设备，包括IP摄像头和打印机。在其巅峰时期，Mirai机器人数量达到了40万台。包括亚马逊，Netflix，Reddit，Spotify，Tumblr和Twitter在内的服务都收到干扰。  </p><p>2018年初，一种新的DDoS技术开始出现。2月28日，版本控制托管服务GitHub遭到了大规模的拒绝服务攻击，每秒1.35 TB的流量攻击了这个热门网站。虽然GitHub只是断断续续地下线，并在不到20分钟的时间内成功地击退了攻击，但攻击的规模令人担忧，因为它超过了Dyn攻击，后者的峰值为每秒1.2 TB。  </p><p>对发起攻击的技术的分析显示，在某些方面，它比其他攻击更简单。虽然Dyn攻击是Mirai僵尸网络的产物，它需要恶意软件来感染数以千计的物联网设备，但GitHub攻击利用了运行Memcached内存缓存系统的服务器，该系统可以在响应简单请求时返回非常大的数据块。<br>Memcached仅用于在内部网络上运行的受保护服务器上，通常几乎没有安全机制来防止恶意攻击者欺骗IP地址，并向毫无戒心的受害者发送大量数据。不幸的是，成千上万的Memcached服务器正在开放的互联网上，并且它们在DDoS攻击中的使用率也出现了激增。说服务器被“劫持”是不公平的，因为他们会在不问任何问题的情况下欣然发送数据包。  </p><p>在GitHub攻击几天后，另一场基于memecached的DDoS攻击以每秒1.7 TB的数据攻击了一家美国服务提供商。  </p><p>Mirai僵尸网络的重要性在于，与大多数DDoS攻击不同，它利用了易受攻击的物联网设备，而不是PC和服务器。根据BI Intelligence的说法，到2020年人们认为将会有340亿互联网连接设备，而且大多数(240亿)都是物联网设备，这一点是特别可怕的。</p><p>不幸的是，Mirai不会是最后一个使用IOT的僵尸网络。一项针对Akamai、Cloudflare、Flashpoint、谷歌、riskq和Cymru安全团队的调查，发现了一个规模类似的僵尸网络，名为WireX，由100个国家的10万部受到攻击的Android设备组成。针对内容提供商和内容交付网络的一系列大型DDoS攻击促使调查展开。  </p><h2 id="如今的-DDoS-攻击"><a href="#如今的-DDoS-攻击" class="headerlink" title="如今的 DDoS 攻击"></a><strong>如今的 DDoS 攻击</strong></h2><p>尽管DDoS攻击的数量一直在下降，但它们仍然是一个重大威胁。卡巴斯基实验室(Kaspersky Labs)报告称，由于“异常活跃的9月”，除了第三季度外，2018年DDoS攻击的数量比前一年每季度都有所下降。总的来说，DDoS活动在2018年下降了13%。</p><p>卡巴斯基表示，最近发现的像Torii和DemonBot这样能够发起DDoS攻击的僵尸网络令人担忧。Torii能够接管一系列物联网设备，被认为比Mirai更持久、更危险。DemonBot劫持Hadoop集群，这让它获得了更多的计算能力。</p><p>另一个令人担忧的趋势是，像0x-booter这样新的DDoS启动平台的可用性。DDoS攻击利用了大约16000个感染了Bushido恶意软件(Mirai变种)的物联网设备。</p><p>卡巴斯基报告确实找到了减少DDoS攻击量及其造成的损害的理由。它引用了全球法律执行机构在关闭DDoS运营商方面的有效性，这可能是攻击减少的一个原因。</p><h2 id="DDoS-攻击常用的工具"><a href="#DDoS-攻击常用的工具" class="headerlink" title="DDoS 攻击常用的工具"></a><strong>DDoS 攻击常用的工具</strong></h2><p>通常，DDoS攻击者依赖于僵尸网络——由受恶意软件感染的系统集中控制的网络集合。这些被感染的端点通常是计算机和服务器，但越来越多的是物联网和移动设备。攻击者将通过识别他们发起网络钓鱼攻击、恶意攻击和其他大规模感染技术感染的脆弱系统来获取这些系统。越来越多的攻击者还会从构建僵尸网络的人那里租用这些网络。</p><h2 id="三种类型的-DDoS-攻击"><a href="#三种类型的-DDoS-攻击" class="headerlink" title="三种类型的 DDoS 攻击"></a><strong>三种类型的 DDoS 攻击</strong></h2><p><strong>第一种：</strong> 使用大量虚假流量来拦截网站或服务器等资源的攻击，包括ICMP、UDP和欺骗数据包泛滥攻击。  </p><p><strong>第二种：</strong> DDoS攻击是使用数据包来攻击网络基础设施和基础设施管理工具。这些协议攻击包括SYN flood和Smurf DDoS等。  </p><p><strong>第三种：</strong> 一些DDoS攻击以组织的应用层为目标，通过向应用程序大量发送恶意编写的请求来执行。  </p><p><strong>三种类型的目标是一样的:让在线资源变得迟钝或完全没有反应。</strong></p><h2 id="DDoS-攻击相关时间轴"><a href="#DDoS-攻击相关时间轴" class="headerlink" title="DDoS 攻击相关时间轴"></a><strong>DDoS 攻击相关时间轴</strong></h2><h3 id="1996年"><a href="#1996年" class="headerlink" title="1996年"></a><strong>1996年</strong></h3><p>9月19日，CERT&#x2F;CC发布公告，使用源IP地址欺骗的 TCP SYN 洪水攻击处于增长趋势。</p><p>9月19日至21日，互联网服务提供商PANIX一连三天遭到持续的DDoS攻击，影响到大量使用PANIX作电子服务平台的用户。</p><h3 id="1997年"><a href="#1997年" class="headerlink" title="1997年"></a><strong>1997年</strong></h3><p>早期的DDoS工具从地下浮现，Trinoo、Tribe Flood、TFN2K、Shaft等工具进入人们的视野。当时使用的攻击资源为IRC、Eggdrop或是中了Sub7木马的肉鸡。</p><h3 id="1998年"><a href="#1998年" class="headerlink" title="1998年"></a><strong>1998年</strong></h3><p>1月，通过反欺骗防护DDoS攻击的工具 RFC 2267 发布，并很快成为众多网络厂商采用的最佳实践。</p><p>2月7日至20日，名为“黑手党男孩”的黑客对多个电子商务网站发动持续性DDoS攻击，据加拿大皇家警察和美国FBI的调查，黑手党男孩通过IRC吹嘘他的“战绩”。</p><h3 id="2001年"><a href="#2001年" class="headerlink" title="2001年"></a><strong>2001年</strong></h3><p>黑手党男孩被判处8个月的“公开监禁”，一年的假释期，限制使用互联网，并处于少量罚金。</p><p>8月15日，Smurf Amplifier Registry 发布，帮助发现和禁用在DDoS中被滥用的“Smurf Amplifier”。这种攻击使用假冒的广播地址发送ICMP，让受害者接收反馈的流量。到2012年，超过19.3万个网络得到修复。</p><h3 id="2002年"><a href="#2002年" class="headerlink" title="2002年"></a><strong>2002年</strong></h3><p>10月19日至21日，大规模Smurf攻击根DNS服务器，并造成一些网站的瘫痪。最终攻击被击退，当时的攻击总流量达到900Mbps。</p><h3 id="2003年"><a href="#2003年" class="headerlink" title="2003年"></a><strong>2003年</strong></h3><p>9月，美国国会推动网络安全立法，要求私人企业及上市公司上报他们的网络安全工作。</p><h3 id="2007年"><a href="#2007年" class="headerlink" title="2007年"></a><strong>2007年</strong></h3><p>4月7日至5月10日，爱沙尼亚由于与俄罗斯的政治紧张关系，遭受了持续一个多月的DDoS攻击。</p><h3 id="2008年"><a href="#2008年" class="headerlink" title="2008年"></a><strong>2008年</strong></h3><p>1月21日，匿名者首次高调发动DDoS攻击，反动教会逼迫网站删除汤姆·克鲁斯的采访视频。</p><h3 id="2010年"><a href="#2010年" class="headerlink" title="2010年"></a><strong>2010年</strong></h3><p>12月3日至5日，由于阻止了维基解密的支付功能，在线支付及金融服务公司的网站被攻击。</p><h3 id="2011年"><a href="#2011年" class="headerlink" title="2011年"></a><strong>2011年</strong></h3><p>4月20日至26日，索尼遭受DDoS攻击，目的是为了掩盖盗取索尼PS的用户数据。</p><p>6月9日，美国中央情报局局长 Leon Panetta 表示：“下一次珍珠港事件，很可能是网络攻击致使美国的电网、安全和金融系统的瘫痪。”</p><h3 id="2012年"><a href="#2012年" class="headerlink" title="2012年"></a><strong>2012年</strong></h3><p>3月24日，加拿大新民主党的竞选投票系统被攻击，投票时间和投票人数均受影响。</p><p>9月4日，匿名者为抗议对阿桑奇的行为，攻击了美国和两国政府的网站，包括英国情报机构M15和M16。</p><p>9月18日，伊斯兰教组织 Izz Ad-Din 为抗议美国博客写手发布的穆斯林视频，攻击美国网站，该行动命名为“Ababil”。</p><h3 id="2013年"><a href="#2013年" class="headerlink" title="2013年"></a><strong>2013年</strong></h3><p>3月16日，国际反垃圾邮件组织(Spamhaus)因为其列出了网络犯罪者托管企业的阻断名单，而遭到了垃圾信息和僵尸网络高达300Gbps的攻击。</p><p>5月13日，FBI表示，和银行展开更多的合作是探测网络攻击的关键。</p><h3 id="2014年"><a href="#2014年" class="headerlink" title="2014年"></a><strong>2014年</strong></h3><p>7月28日，急剧下降的DDoS攻击与以色列和伊斯兰抵抗运动(Hamas)之间最终未达成停火协商相关。</p><p>11月24日，在一名仅持有BB弹仿真手枪的12岁小男孩，Tamir Rice，在克利夫兰公园被当地警员击毙后，匿名者封闭了其在克利夫兰市的网站并上传了一段视频。</p><p>12月25日，黑客组织“蜥蜴部队”(Lizard Squad)宣布对其在SONY的PlayStation Network和微软的Xbox live上发动的DDoS攻击负责。</p><h3 id="2015年"><a href="#2015年" class="headerlink" title="2015年"></a><strong>2015年</strong></h3><p>12月15日，在土耳其发生击落俄罗斯军用飞机事件之后，土耳其遭到大规模DDoS攻击。</p><h3 id="2016年"><a href="#2016年" class="headerlink" title="2016年"></a><strong>2016年</strong></h3><p>3月15日，匿名者宣布发动 #OpTrump 行动。</p><p>8月，里约奥运官方网站遭受大规模、复杂的DDoS网络攻击，攻击峰会流量达到500Gbps。</p><p>10月21日，提供动态DNS服务的Dyn DNS遭到了大规模DDoS攻击，攻击主要影响其位于美国东区的服务。此次攻击导致许多使用DynDNS服务的网站遭遇访问问题，其中包括 GitHub、Twitter、Airbnb、Reddit、Freshbooks、Heroku、SoundCloud,、Spotify 和 Shopify。攻击导致这些网站一度瘫痪，Twitter甚至出现了近24小时0访问的局面。</p><h3 id="2018年"><a href="#2018年" class="headerlink" title="2018年"></a><strong>2018年</strong></h3><p>1月底，美国国防部遭受了大量垃圾邮件攻击，在随后的3月下旬，俄罗斯国防部也遭受了DDOS攻击。</p><p>3月初，一系列针对GitHub和某服务提供商的攻击，此次攻击制造了破纪录的攻击流量 —— 超过1TB&#x2F;s。这些巨额流量通过利用Linux平台的缓存服务Memcached漏洞实现。</p><p><strong>二十多年的时间里，随着黑客技术发展，利用物联网设备组建僵尸网络发起攻击的现象也日益严峻，墨者安全的网络安全之路可谓任重道远，如何解决日益增多的难题成为墨者安全未来发展的考验。而对于企业来说，提高网络安全意识，合理部署墨者安全高防产品，DDOS高防可在较大程度上降低DDoS攻击造成的损失。</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+            <tag> DDoS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IDM + 暴力猴实现百度网盘满速下载</title>
+      <link href="/2021/10/22/IDM1/"/>
+      <url>/2021/10/22/IDM1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="通过IDM实现百度网盘不限速下载"><a href="#通过IDM实现百度网盘不限速下载" class="headerlink" title="通过IDM实现百度网盘不限速下载"></a><strong>通过IDM实现百度网盘不限速下载</strong></h1><h2 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a><strong>0x00 前言</strong></h2><p>众所周知，百度网盘的下载速度很慢，即使买了SVIP会员，也没法满速下载。于是网上就时不时的出现一些百度网盘不限速下载的方法，我在这里分享一个目前较为稳定的下载方法。  </p><h2 id="0x01-工具-x2F-原料"><a href="#0x01-工具-x2F-原料" class="headerlink" title="0x01 工具&#x2F;原料"></a><strong>0x01 工具&#x2F;原料</strong></h2><ul><li>一台搭载Windows系统电脑（ 此方法只能用于在电脑上不限速下载百度网盘里面的文件 ）</li><li>百度网盘账号</li><li>新版 Microsoft Edge 浏览器（推荐）</li><li>暴力猴或油猴插件</li><li>Internet Download Manager</li></ul><h2 id="0x02-IDM的下载和配置"><a href="#0x02-IDM的下载和配置" class="headerlink" title="0x02 IDM的下载和配置"></a><strong>0x02 IDM的下载和配置</strong></h2><p>作为十分强大的下载工具，IDM付费也是应该的，但并非每个人都能有能力买到正版软件，我在这里推荐用俄罗斯大神破解并重新打包的版本  </p><h3 id="1-下载链接"><a href="#1-下载链接" class="headerlink" title="1. 下载链接"></a><strong>1. 下载链接</strong></h3><blockquote><p>官方正版：<a href="https://www.internetdownloadmanager.com/">IDM下载</a><br>俄罗斯大神版：<a href="https://lrepacks.net/repaki-programm-dlya-interneta/56-internet-download-manager-repack.html">IDM下载</a><br>国内网盘(俄罗斯大神版):<a href="https://wwe.lanzouw.com/b01uppjcd">IDM下载</a>  提取码:stxw</p></blockquote><h3 id="2-语言改为中文"><a href="#2-语言改为中文" class="headerlink" title="2. 语言改为中文"></a><strong>2. 语言改为中文</strong></h3><p>下载安装后打开IDM ,  一次点 <code>View</code> - <code>Language</code> - <code>简体中文</code> , 设置完成后IDM会重启 。  </p><p><img src="https://pic.imgdb.cn/item/6172c1932ab3f51d910abad3.jpg"></p><h3 id="3-修改线程和用户代理UA（关键一步）"><a href="#3-修改线程和用户代理UA（关键一步）" class="headerlink" title="3. 修改线程和用户代理UA（关键一步）"></a><strong>3. 修改线程和用户代理UA（关键一步）</strong></h3><p>打开IDM后点 <code>选项</code> - <code>下载</code> , 然后将以下代码复制到 <code>手动添加下载任务时使用的用户代理(UA)</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netdisk;7.2.6.2;PC;PC-Windows;6.3.9600;WindowsBaiduYunGuanJia</span><br></pre></td></tr></table></figure><p><img src="https://pic.imgdb.cn/item/6172c42e2ab3f51d910de5c7.png">  </p><p>然后点击 <code>连接</code> , 将下面的 <code>最大连接数</code> 改为 4 （只能改成4，改成其他会失败）然后点确定。  </p><p><img src="https://pic.imgdb.cn/item/6172c6ed2ab3f51d911131c4.png"></p><h2 id="0x03-使用步骤"><a href="#0x03-使用步骤" class="headerlink" title="0x03 使用步骤"></a><strong>0x03 使用步骤</strong></h2><h3 id="1-Edge浏览器下载暴力猴（或油猴插件）"><a href="#1-Edge浏览器下载暴力猴（或油猴插件）" class="headerlink" title="1. Edge浏览器下载暴力猴（或油猴插件）"></a><strong>1. Edge浏览器下载暴力猴（或油猴插件）</strong></h3><blockquote><p>点击浏览器右上角的 <strong>三个横点（ ··· ）</strong>，再点击扩展，然后点获取 Microsoft Edge 扩展  </p><p><img src="https://pic.imgdb.cn/item/61729b6e2ab3f51d91df935e.jpg">  </p><p>搜索 ‘暴力猴’ 并安装 ，安装成功后浏览器右上角会出现一个猴头  </p><p><img src="https://pic.imgdb.cn/item/61729f242ab3f51d91e2c537.png"></p></blockquote><h3 id="2-下载不限速插件"><a href="#2-下载不限速插件" class="headerlink" title="2. 下载不限速插件"></a><strong>2. 下载不限速插件</strong></h3><blockquote><p>打开新页面下载 <a href="https://greasyfork.org/zh-CN/scripts/418182-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%AE%80%E6%98%93%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B-%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%A4%8D%E6%B4%BB%E7%89%88">百度网盘简易下载助手</a> 并安装  </p><p><img src="https://pic.imgdb.cn/item/6172bc242ab3f51d910384b3.jpg">  </p></blockquote><h3 id="3-用百度网盘下载文件"><a href="#3-用百度网盘下载文件" class="headerlink" title="3. 用百度网盘下载文件"></a><strong>3. 用百度网盘下载文件</strong></h3><p>浏览器打开<a href="https://pan.baidu.com/">百度网盘网页版</a> ， 登陆自己的账号 ，选中需要下载的文件，再点 <code>简易下载助手</code> , 在弹出来的窗口点 <code>点击获取直连地址</code>, 然后再点 <code>复制直连地址</code><br><strong>注:</strong> 第一次使用时需要关注 <strong><code>软件小妹</code></strong> 获取验证码  </p><p><img src="https://pic.imgdb.cn/item/6172ca5a2ab3f51d9115b96c.jpg">  </p><p>然后打开IDM点击 <code>新建任务</code> 在地址栏粘贴刚刚复制的直连点确定，然后选择保存地址( 一般默认即可 ) ， 点确定即可百度网盘享受全速下载 。</p><h3 id="⭐⭐如果这篇文章对你有帮助的话，请收藏本网站，后期我会分享更多-IDM-高阶玩法⭐⭐"><a href="#⭐⭐如果这篇文章对你有帮助的话，请收藏本网站，后期我会分享更多-IDM-高阶玩法⭐⭐" class="headerlink" title="⭐⭐如果这篇文章对你有帮助的话，请收藏本网站，后期我会分享更多 IDM 高阶玩法⭐⭐"></a>⭐⭐如果这篇文章对你有帮助的话，请收藏本网站，后期我会分享更多 IDM 高阶玩法⭐⭐</h3><p>🌟使用过程中若遇到其他问题，请直接在底部评论区中回复🌟</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 百度网盘 </category>
+          
+          <category> IDM的花式用法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IDM </tag>
+            
+            <tag> 暴力猴 </tag>
+            
+            <tag> 百度网盘 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>星雾的软件库</title>
+      <link href="/2021/10/21/Apps/"/>
+      <url>/2021/10/21/Apps/</url>
+      
+        <content type="html"><![CDATA[<h1 id="软件合集"><a href="#软件合集" class="headerlink" title="软件合集"></a><strong>软件合集</strong></h1><hr><h2 id="0x00-前言："><a href="#0x00-前言：" class="headerlink" title="0x00 前言："></a><strong>0x00 前言</strong>：</h2><p>一直想做一个自己的软件集 ，现在通过博客这个平台实现了 ，如果有推荐的软件，可在评论区说哈 ，我保证我给出的安装包都是安全的 ! ! !  </p><hr><h2 id="0x01-Android安卓篇"><a href="#0x01-Android安卓篇" class="headerlink" title="0x01 Android安卓篇"></a><strong>0x01 Android安卓篇</strong></h2><p>在安卓篇，我会推荐一些我使用过或正在使用的好软件</p><h3 id="1-酷安-CoolApk"><a href="#1-酷安-CoolApk" class="headerlink" title="1. 酷安 CoolApk"></a><strong>1. 酷安 CoolApk</strong></h3><p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐<br>📑 想当年 ，我为了找一个软件 ，穿梭于各种品牌的手机的应用商城之间 ，却总是找不到我想找的软件 ，直到有一天我偶然了解到酷安Coolapk ，它的讨论区颠覆了我对评论区的认知 ，我相信每一个愿意琢磨数码产品的人的手机里一定装着酷安  </p><p>🔗废话不多说，直接上链接</p><blockquote><p>蓝奏云盘：<a href="https://www.lanzouw.com/iLUQXvkwckf">提取码 ( abc9 )</a> (推荐)<br>百度云盘：<a href="https://pan.baidu.com/s/1-f5_yPjqAYlvAiA_phgukQ">提取码 ( 3v4k )</a><br>酷安链接：<a href="https://coolapk.com/apk/4599?from=home-footer">点我下载</a> ( 有应用截图 )<br>官方链接：<a href="https://coolapk.com/">点我下载</a></p></blockquote><h3 id="2-Code"><a href="#2-Code" class="headerlink" title="2. Code+"></a><strong>2. Code+</strong></h3><p><strong>推荐指数：</strong> ⭐⭐⭐⭐<br>📑 你是不是也和我一样感觉 CSDN 的官方APP十分难(La)用(Ji) , 是不是也经常被它的臃肿劝退 ? 那你可以试试由 Ryens 大佬开发的 CSDN 第三方客户端 Code+<br>🔗上链接</p><blockquote><p>蓝奏云盘：<a href="https://www.lanzouw.com/iNE7Mvkwbyd">提取码 ( 9248 )</a> (推荐)<br>百度云盘：<a href="https://pan.baidu.com/s/1v9_uPaTVJ3Xecl2Dw1RZaQ">提取码 ( vpvd )</a><br>酷安链接：<a href="https://www.coolapk.com/apk/com.su.codeplus">点我下载</a> ( 有应用截图 )<br>官方链接：暂无</p></blockquote><h3 id="3-神奇磁力"><a href="#3-神奇磁力" class="headerlink" title="3. 神奇磁力"></a><strong>3. 神奇磁力</strong></h3><p><strong>推荐指数：</strong> ⭐⭐⭐⭐<br>📑 被某雷恶心过的我一直在用的磁力播放下载软件 ; 我好多朋友都被我安利过后 ，多次问我要了链接 ; 神奇磁力，在磁力搜索下载播放方面，我心目中的 NO.1 👍👍<br>🔗上链接</p><blockquote><p>蓝奏云盘：<a href="https://www.lanzouw.com/iZSOBvkwcmh">提取码 ( goiv )</a> (推荐)<br>百度云盘：<a href="https://pan.baidu.com/s/1PlIEfEWH0J9-tJSIS_nUmw">提取码 ( yxck )</a><br>酷安链接：暂无 ( 实在是搞不懂这么好的一个软件为什么还没上酷安 )<br>官方链接：<a href="https://magicmagnet.me/">点我下载</a> ( 有应用截图 )</p></blockquote><h3 id="4-番茄Todo"><a href="#4-番茄Todo" class="headerlink" title="4. 番茄Todo"></a><strong>4. 番茄Todo</strong></h3><p><strong>推荐指数：</strong> ⭐⭐⭐⭐<br>📑 想把手机放到一边认真工作 ( 学习 ) 但又坚持不了太长时间吗 ？ 那就试试番茄Todo ！ 它的会员也不贵，如果只是为了锁定手机，基础功能就足够了， 高三党的福利📚<br>🔗上链接</p><blockquote><p>蓝奏云盘：<a href="https://www.lanzouw.com/ielDSvkxlwh">提取码 ( di40 )</a> (推荐)<br>百度云盘：<a href="https://pan.baidu.com/s/1A32GjeHQzCfvVhyB2aQEKw">提取码 ( 411n )</a><br>酷安链接：<a href="https://www.coolapk.com/apk/com.plan.kot32.tomatotime">点我下载</a> ( 有应用截图 )<br>官方链接：暂无</p></blockquote><h3 id="5-幕布"><a href="#5-幕布" class="headerlink" title="5. 幕布"></a><strong>5. 幕布</strong></h3><p><strong>推荐指数：</strong> ⭐⭐⭐<br>📑 一款清单笔记 ？ 我更喜欢它的思维导图，它的任务管理列单也挺好用的<br>支持：Windows ，MacOS ，iOS ，Android<br>🔗上链接</p><blockquote><p>蓝奏云盘：<a href="https://www.lanzouw.com/iiOpVvkxs5c">提取码 ( 16sr )</a><br>百度云盘：<a href="https://pan.baidu.com/s/1WK04u4kHfCmkNmBPvZQe7g">提取码 ( ij9q )</a><br>酷安链接：<a href="https://www.coolapk.com/apk/com.mubu.app">点我下载</a> ( 有应用截图 )<br>官方链接：<a href="https://mubu.com/home">点我下载</a> ( 有应用截图 , 推荐 ) </p></blockquote><h3 id="6-谷歌键盘Gboard"><a href="#6-谷歌键盘Gboard" class="headerlink" title="6. 谷歌键盘Gboard"></a><strong>6. 谷歌键盘Gboard</strong></h3><p><strong>推荐指数：</strong> ⭐⭐⭐<br>📑 怎么说呢 ？是我用过的最好的输入法 ，Gborad永远滴神！！！<br>缺点：由于一些众所周知的原因 ，它的在线功能都用不了<br>🔗上链接</p><blockquote><p>蓝奏云盘：<a href="https://www.lanzouw.com/iqJJ3vky03i">提取码 ( 8qyc )</a><br>百度云盘：<a href="https://pan.baidu.com/s/1ZW52MpcDnLlO3Hfxr3NhTg">提取码 ( hm8z )</a><br>酷安链接：<a href="https://www.coolapk.com/apk/com.google.android.inputmethod.latin">点我下载</a> ( 可能打不开 )<br>官方链接：别看我，即使我给了链接，你也打不开，乖乖地从网盘下吧 🧐🧐</p></blockquote><h3 id="7-数学求解器Symbolab"><a href="#7-数学求解器Symbolab" class="headerlink" title="7. 数学求解器Symbolab"></a><strong>7. 数学求解器Symbolab</strong></h3><p><strong>推荐指数：</strong> ⭐⭐⭐⭐⭐<br>📑 本来想的推荐微软数学的，但又想起了这个更为强大的数学解题工具，只是当时没想起来名字，终于在朋友的提醒下终于想起来了它的名字，于是它就出现在这里了。用过的人都说好，工科生的福音</p><blockquote><p>蓝奏云盘：<a href="https://wwe.lanzouw.com/i7tMFxwzuhc">提取码 ( hvxt )</a> (建议)<br>官方链接：<a href="https://play.google.com/store/apps/details?id=com.devsense.symbolab">Play Store</a> (可能打不开)</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 分享推荐 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+            <tag> Android </tag>
+            
+            <tag> Apps </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>国庆节快乐</title>
+      <link href="/2021/10/01/10.01/"/>
+      <url>/2021/10/01/10.01/</url>
+      
+        <content type="html"><![CDATA[<h1 id="要国庆节了！！！祝伟大祖国生日快乐！！！！"><a href="#要国庆节了！！！祝伟大祖国生日快乐！！！！" class="headerlink" title="要国庆节了！！！祝伟大祖国生日快乐！！！！"></a>要国庆节了！！！祝伟大祖国生日快乐！！！！</h1><h2 id="代码在这里"><a href="#代码在这里" class="headerlink" title="代码在这里"></a>代码在这里</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.awt.Color;</span><br><span class="line"><span class="keyword">import</span> java.awt.Graphics;</span><br><span class="line"><span class="keyword">import</span> java.awt.Image;</span><br><span class="line"><span class="keyword">import</span> java.awt.Toolkit;</span><br><span class="line"><span class="keyword">import</span> javax.swing.JFrame;</span><br><span class="line"> </span><br><span class="line"><span class="meta">@SuppressWarnings(&quot;serial&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Love</span> <span class="keyword">extends</span> <span class="title class_">JFrame</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// 定义加载窗口大小</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">GAME_WIDTH</span> <span class="operator">=</span> <span class="number">500</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">GAME_HEIGHT</span> <span class="operator">=</span> <span class="number">500</span>;</span><br><span class="line">    <span class="comment">// 获取屏幕窗口大小</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">WIDTH</span> <span class="operator">=</span> Toolkit.getDefaultToolkit()</span><br><span class="line">            .getScreenSize().width;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">HEIGHT</span> <span class="operator">=</span> Toolkit.getDefaultToolkit()</span><br><span class="line">            .getScreenSize().height;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Love</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// 设置窗口标题</span></span><br><span class="line">        <span class="built_in">this</span>.setTitle(<span class="string">&quot;心形曲线&quot;</span>);</span><br><span class="line">        <span class="comment">// 设置窗口初始位置</span></span><br><span class="line">        <span class="built_in">this</span>.setLocation((WIDTH - GAME_WIDTH) / <span class="number">2</span>, (HEIGHT - GAME_HEIGHT) / <span class="number">2</span>);</span><br><span class="line">        <span class="comment">// 设置窗口大小</span></span><br><span class="line">        <span class="built_in">this</span>.setSize(GAME_WIDTH, GAME_HEIGHT);</span><br><span class="line">        <span class="comment">// 设置背景色</span></span><br><span class="line">        <span class="built_in">this</span>.setBackground(Color.BLACK);</span><br><span class="line">        <span class="comment">// 设置窗口关闭方式</span></span><br><span class="line">        <span class="built_in">this</span>.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span><br><span class="line">        <span class="comment">// 设置窗口显示</span></span><br><span class="line">        <span class="built_in">this</span>.setVisible(<span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">paint</span><span class="params">(Graphics g)</span> &#123;</span><br><span class="line"> </span><br><span class="line">        <span class="type">double</span> x, y, r;</span><br><span class="line">        <span class="type">Image</span> <span class="variable">OffScreen</span> <span class="operator">=</span> createImage(GAME_WIDTH, GAME_HEIGHT);</span><br><span class="line">        <span class="type">Graphics</span> <span class="variable">drawOffScreen</span> <span class="operator">=</span> OffScreen.getGraphics();</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">90</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; <span class="number">90</span>; j++) &#123;</span><br><span class="line">                r = Math.PI / <span class="number">45</span> * i * (<span class="number">1</span> - Math.sin(Math.PI / <span class="number">45</span> * j)) * <span class="number">18</span>;</span><br><span class="line">                x = r * Math.cos(Math.PI / <span class="number">45</span> * j) * Math.sin(Math.PI / <span class="number">45</span> * i)</span><br><span class="line">                        + GAME_WIDTH / <span class="number">2</span>;</span><br><span class="line">                y = -r * Math.sin(Math.PI / <span class="number">45</span> * j) + GAME_HEIGHT / <span class="number">4</span>;</span><br><span class="line"> </span><br><span class="line">                <span class="comment">//设置画笔颜色</span></span><br><span class="line">                drawOffScreen.setColor(Color.PINK);</span><br><span class="line">                <span class="comment">// 绘制椭圆</span></span><br><span class="line">                drawOffScreen.fillOval((<span class="type">int</span>) x, (<span class="type">int</span>) y, <span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 生成图片</span></span><br><span class="line">            g.drawImage(OffScreen, <span class="number">0</span>, <span class="number">0</span>, <span class="built_in">this</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Love</span> <span class="variable">demo</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Love</span>();</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">t</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(demo);</span><br><span class="line">        t.start();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">                <span class="built_in">this</span>.repaint();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="最后的实现效果！！！"><a href="#最后的实现效果！！！" class="headerlink" title="最后的实现效果！！！"></a>最后的实现效果！！！</h2><p><img src="https://i.loli.net/2021/10/02/m8vVTSuGOktlyDe.png" alt="1.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 节日 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 节日 </tag>
+            
+            <tag> 国庆 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CTF.WP - Explosion</title>
+      <link href="/2021/09/26/CTF-WP1/"/>
+      <url>/2021/09/26/CTF-WP1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Misc-Explosion"><a href="#Misc-Explosion" class="headerlink" title="Misc - Explosion"></a><strong>Misc - Explosion</strong></h2><p>题目地址<a href="http://139.196.79.159:8000/challenges#Explosion">Explosion</a></p><h2 id="0x00-前言："><a href="#0x00-前言：" class="headerlink" title="0x00 前言："></a><strong>0x00 前言：</strong></h2><p>此题用到 <strong>Zip伪加密</strong> ，<strong>Zip明文破解</strong> ，<strong>CRC32爆破</strong> 等。</p><p><img src="https://pic.imgdb.cn/item/618aaea12ab3f51d91a4624f.png"></p><h2 id="0x01-开始"><a href="#0x01-开始" class="headerlink" title="0x01 开始"></a><strong>0x01 开始</strong></h2><p>下载附件，发现是一张图片，属性里面查看详细信息，也没发现flag，所以先拖到Binwalk里面看看</p><p><img src="https://pic.imgdb.cn/item/618aaf962ab3f51d91a4a9b4.png"></p><p>果然存在猫腻，图片里面还有个压缩文件，直接用 Binwalk 分离，发现有个flag.zip的加密压缩包，先放到010Editor里面看看</p><p><img src="https://pic.imgdb.cn/item/618aaea12ab3f51d91a46253.png"></p><p>压缩源文件数据区</p><p><img src="https://pic.imgdb.cn/item/618aaea12ab3f51d91a46258.png"></p><p>压缩源文件目录区</p><p>通过压缩源文件数据区和目录区的全局方式位标记可知，本压缩文件进行了伪加密，于是把压缩源文件目录区的两个全局方位标记改为 00 00 并保存，压缩文件就能打开了。</p><p>打开压缩文件，发现了一个 Readme.txt 和 flag.zip ，感觉事情还没那么简单</p><p><img src="https://pic.imgdb.cn/item/618aaea12ab3f51d91a46260.png"></p><p>不出所料，Readme.txt 里面没有Flag，且 flag.zip 也被加密了，通过010Editor查看，也不是伪加密</p><p><img src="https://pic.imgdb.cn/item/618aaea12ab3f51d91a46268.png"></p><p>flag.zip里面有一张图片和一个 Readme.txt ,比较两处 Readme.txt 发现他们的CRC32 值相同，这样可以尝试用明文爆破的方法是破解flag.zip的密码,于是用祖传的ARCHPR进行了明文破解</p><p><img src="https://pic.imgdb.cn/item/618aaead2ab3f51d91a465ac.png"></p><p>大概跑了四分钟后，破解出了密码，打开压缩包，解压出里面的图片，也没发现什么关键信息flag，详细信息里面也没有flag </p><p><img src="https://pic.imgdb.cn/item/618aaead2ab3f51d91a465b4.png"></p><p>放到 Binwalk 也没发现什么信息，那就用010Editor看一下，</p><p><img src="https://pic.imgdb.cn/item/618aaead2ab3f51d91a465ba.png"></p><p>CRC值不匹配，所以极有可能是修改过图片高度或宽度，所以把代表高度的 07 20 修改为 07 A0 看看，</p><p><img src="https://pic.imgdb.cn/item/618aaead2ab3f51d91a465c4.png"></p><p>终于找到了flag ，所以这道题的Flag是Viking{BF5_1s_a_Good_Game}</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CTF </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 安全 </tag>
+            
+            <tag> CTF </tag>
+            
+            <tag> Viking </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+    
+    
+    <entry>
+      <title>关于本站</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[#aside-content.aside-content > .sticky_layout > .card-widget.card-clock > .card-glass > .card-background {    background-color: unset ;    box-shadow: unset ;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>图集</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
+      
+        <content type="html"><![CDATA[<div class="gallery-group-main">  <figure class="gallery-group">  <img class="gallery-group-img no-lightbox" src='https://tuchuangs.com/imgs/2022/04/18/6fd49d1415e6561b.jpg' alt="Group Image Gallery">  <figcaption>  <div class="gallery-group-name">精选壁纸</div>  <p>一些我自己超喜欢的精选壁纸</p>  <a href='/wallpaper'></a>  </figcaption>  </figure>  </div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>友情链接</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>留言板</title>
+      <link href="/messageboard/index.html"/>
+      <url>/messageboard/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="留言板："><a href="#留言板：" class="headerlink" title="留言板："></a>留言板：</h1><h2 id="有什么想说的？"><a href="#有什么想说的？" class="headerlink" title=" 有什么想说的？ "></a><div align="center"> 有什么想说的？ </font></h2><h2 id="有什么想问的？"><a href="#有什么想问的？" class="headerlink" title=" 有什么想问的？ "></a><div align="center"> 有什么想问的？ </font></h2><h2 id="有什么想吐槽的？"><a href="#有什么想吐槽的？" class="headerlink" title=" 有什么想吐槽的？ "></a><div align="center"> 有什么想吐槽的？ </font></h2><h2 id="可以在下面留言…"><a href="#可以在下面留言…" class="headerlink" title=" 可以在下面留言… "></a><div align="center"> 可以在下面留言… </font></h2>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>壁纸</title>
+      <link href="/wallpaper/index.html"/>
+      <url>/wallpaper/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="！！！多图警告！！！-建议连接wifi浏览"><a href="#！！！多图警告！！！-建议连接wifi浏览" class="headerlink" title="( ！！！多图警告！！！)建议连接wifi浏览"></a><strong>( ！！！多图警告！！！)建议连接wifi浏览</strong></h2><div class="fj-gallery"><p><img src="https://tuchuangs.com/imgs/2022/04/18/0149c75799bb2782.png"><br><img src="https://tuchuangs.com/imgs/2022/04/18/715b99722bb81e1e.png"><br><img src="https://tuchuangs.com/imgs/2022/04/18/43c32c2584a3b63b.png"><br><img src="https://tuchuangs.com/imgs/2022/04/18/39430ca8832b4e2c.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/6fd49d1415e6561b.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/20cc95bc73ef6ff7.png"><br><img src="https://tuchuangs.com/imgs/2022/04/18/f7783c31e1370c93.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/34d9ee174e9758df.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/dff448ed893de14d.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/da0b61e1b758f251.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/6fb41f9739d836e0.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/a525aac5fff7cab2.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/331a80b33f14fc18.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/83cbcc15cb9572c7.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/fa3797ed3035c531.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/233891d19d36d610.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/ae9c23b65b866fc8.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/ce3dada65420b34b.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/cf40bf9dda0f6427.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/6052b3cd871da8ef.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/016095fa391db1d0.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/7cc26f9e161068eb.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/c12f5f2a598eb2f2.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/ca179057594dbdde.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/0733856bbd3de046.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/d3b9d0c0a7d58f42.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/05574b18c2141593.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/2aac8e48f1b47f26.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/b7f229ba8b98f16f.png"><br><img src="https://tuchuangs.com/imgs/2022/04/18/a1dd7fc2d6b38f82.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/9925aa0fa0a9bfcf.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/4fc35ad1eccf151c.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/b6ee85de68782854.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/af148283db7a0b1e.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/9bf70755083e51b5.png"><br><img src="https://tuchuangs.com/imgs/2022/04/18/96db1a850637441c.png"><br><img src="https://tuchuangs.com/imgs/2022/04/18/48facc60f98b54db.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/86d7c3e80c93b28e.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/800b2c17ee2b2fd8.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/5a8a0ba81a7a6357.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/1c110ff1362e3788.png"><br><img src="https://tuchuangs.com/imgs/2022/04/18/017539b565dd6410.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/2526a3793cbc7678.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/65506d2c58ca97d7.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/b68ed68082f4e941.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/0695fa1aeb7ce0e4.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/5c143c7147b55354.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/8df987a9778fc12b.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/c169db0a6a1901f6.png"><br><img src="https://tuchuangs.com/imgs/2022/04/18/21dd292c8cff3a0d.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/8a0424300c15e02f.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/a348221779e1f533.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/98dee26003ef884f.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/0e88d00f6b060b9e.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/18/0b5a26b2e2863e1f.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/19/58083f20418f4bc7.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/19/3df75469aff6b398.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/19/ff72593fc03d9bfc.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/19/056ba0503da52b50.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/19/7fb5b40cb4f2a260.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/19/a7d1842935467837.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/19/1bc4c5f793fd14fb.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/19/72022e8cd0139b2a.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/19/580e2411fae13a42.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/19/bb507723575f661b.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/19/96544e31ba725330.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/19/9d60ca0cb2c8775a.jpg"><br><img src="https://tuchuangs.com/imgs/2022/04/19/2afa3939d6027116.png"><br><img src="https://tuchuangs.com/imgs/2022/04/19/0870934aba4eec63.png"></p>          </div>]]></content>
+      
+    </entry>
+    
+    
+  
+</search>

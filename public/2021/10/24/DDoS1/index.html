@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>关于DDoS攻击的一些小知识 | STの星屋</title><meta name="keywords" content="网络安全,DDoS"><meta name="author" content="STxw"><meta name="copyright" content="STxw"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="简单介绍DDoS攻击">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于DDoS攻击的一些小知识">
+<meta property="og:url" content="https://blog.stxwer.top/2021/10/24/DDoS1/index.html">
+<meta property="og:site_name" content="STの星屋">
+<meta property="og:description" content="简单介绍DDoS攻击">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/61756b202ab3f51d914b03eb.jpg">
+<meta property="article:published_time" content="2021-10-24T04:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-04T15:20:18.345Z">
+<meta property="article:author" content="STxw">
+<meta property="article:tag" content="网络安全">
+<meta property="article:tag" content="DDoS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/61756b202ab3f51d914b03eb.jpg"><link rel="shortcut icon" href="https://pic.imgdb.cn/item/62276aff5baa1a80ab8a2d5d.png"><link rel="canonical" href="https://blog.stxwer.top/2021/10/24/DDoS1/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":60,"position":"top","messagePrev":"距离这篇文章上次更新已经","messageNext":"天了, 部分内容可能已经失效"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":250},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"作者: STxw","link":"链接: ","source":"来源: STの星屋","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '关于DDoS攻击的一些小知识',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2022-03-04 23:20:18'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_2839545_ptopx56fcs8.css"><link rel="stylesheet" href="/css/custom/twikoo_beautify.css"  media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/6188b6a92ab3f51d91af3b9c.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-home1"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="http://cloud.stxwer.top"><i class="fa-fw iconfont icon-Cloud"></i><span> 云盘</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw confont icon-menu1"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw iconfont icon-tags2"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw iconfont icon-categories"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-puzzle1"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw iconfont icon-music2"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw iconfont icon-movie2"></i><span> 电影</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw iconfont icon-tupian"></i><span> 图集</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-gonggao"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/messageboard/"><i class="fa-fw iconfont icon-clipboard1"></i><span> 留言</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw iconfont icon-link-unlink"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic.imgdb.cn/item/61756b5d2ab3f51d914b4afd.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">STの星屋</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-home1"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="http://cloud.stxwer.top"><i class="fa-fw iconfont icon-Cloud"></i><span> 云盘</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw confont icon-menu1"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw iconfont icon-tags2"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw iconfont icon-categories"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-puzzle1"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw iconfont icon-music2"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw iconfont icon-movie2"></i><span> 电影</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw iconfont icon-tupian"></i><span> 图集</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-gonggao"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/messageboard/"><i class="fa-fw iconfont icon-clipboard1"></i><span> 留言</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw iconfont icon-link-unlink"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">关于DDoS攻击的一些小知识</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-24T04:00:00.000Z" title="发表于 2021-10-24 12:00:00">2021-10-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-04T15:20:18.345Z" title="更新于 2022-03-04 23:20:18">2022-03-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="关于DDoS攻击的一些小知识"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2021/10/24/DDoS1/#post-comment"><span id="twikoo-count"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="DDoS-攻击"><a href="#DDoS-攻击" class="headerlink" title="DDoS 攻击"></a><strong>DDoS 攻击</strong></h1><p>DDoS攻击是非常常见的一种攻击，根据最新的统计，2018年日均千亿次攻击，频繁程度让人瞠目。随着黑客技术的不断发展，DDoS攻击变得越来越简单和自动化，发动一次DDoS攻击并不需要太高的技术门槛，攻击流量也从最开始的10GB、90GB，逐渐扩大至300GB、400GB，如今已经以“T”级别来计算，DDoS攻击几乎在以飞跃式的速度增长。<br>几十年来，拒绝服务攻击一直是犯罪工具箱的一部分，而且只会变得越来越普遍和强大。</p>
+<h2 id="什么是-DDoS-攻击"><a href="#什么是-DDoS-攻击" class="headerlink" title="什么是 DDoS 攻击?"></a><strong>什么是 DDoS 攻击?</strong></h2><p>分布式拒绝服务 ( DDoS ) 攻击是指攻击者通过攻击的方式试图使服务无法交付。这可以通过阻止对几乎任何设施的访问来实现：服务器、设备、服务、网络、应用程序，甚至应用程序中的特定事务。在 DoS 攻击中，它是一个发送恶意数据或请求的系统 ; DDoS攻击来自多个系统。  </p>
+<p>通常，这些攻击通过淹没具有数据请求的系统来工作。这可能是通过向web服务器发送大量请求来攻击页面，导致页面在请求下崩溃;也可能是向数据库发送大量查询。其结果是使得可用的internet带宽、CPU和RAM容量变得不堪重负。  </p>
+<p>其影响可能是小到服务中断，大到整个网站、应用程序甚至整个业务离线。</p>
+<h2 id="DDoS-攻击的症状"><a href="#DDoS-攻击的症状" class="headerlink" title="DDoS 攻击的症状"></a><strong>DDoS 攻击的症状</strong></h2><p>DDoS攻击看起来像许多可以导致可用性问题的非恶意的东西——比如服务器或系统宕机，来自合法用户的合法请求太多，甚至是电缆被切断。它通常需要流量分析来确定到底发生了什么。</p>
+<h2 id="那些著名的-DDoS-攻击事件"><a href="#那些著名的-DDoS-攻击事件" class="headerlink" title="那些著名的 DDoS 攻击事件"></a><strong>那些著名的 DDoS 攻击事件</strong></h2><p>2000年初，加拿大高中生Michael Calce(又名MafiaBoy)对雅虎发动攻击!通过分布式拒绝服务(DDoS)攻击，设法关闭了当时领先的web引擎之一。在接下来的一周中，Calce瞄准并成功破坏了亚马逊，CNN和eBay等其他网站。这是一场永久改变如何看待拒绝服务攻击的攻击事件。</p>
+<p>当然，这不是第一次DDoS攻击，但这一系列高度公开和成功的攻击，将拒绝服务攻击从新奇和小麻烦转变为CISO和CIO心目中永远的强大业务破坏者。<br>从那时起，DDoS攻击已经成为一种非常常见的威胁，因为它们通常被用来实施报复，进行敲诈勒索，作为一种在线行动主义的手段，甚至用于发动网络战。  </p>
+<p>多年来，DDoS攻击也变得更具威胁性。在20世纪90年代中期，一次攻击可能包括每秒发送150个请求——这足以摧毁许多系统。现在它们可以超过1000 Gbps，庞大的僵尸网络规模在很大程度上也推动了这一点。  </p>
+<p>2016年10月，互联网基础设施服务提供商Dyn DNS(现在的Oracle DYN)被数以千万计的IP地址的DNS查询浪潮所困扰。通过Mirai僵尸网络执行的这次攻击据报道感染了超过10万台物联网设备，包括IP摄像头和打印机。在其巅峰时期，Mirai机器人数量达到了40万台。包括亚马逊，Netflix，Reddit，Spotify，Tumblr和Twitter在内的服务都收到干扰。  </p>
+<p>2018年初，一种新的DDoS技术开始出现。2月28日，版本控制托管服务GitHub遭到了大规模的拒绝服务攻击，每秒1.35 TB的流量攻击了这个热门网站。虽然GitHub只是断断续续地下线，并在不到20分钟的时间内成功地击退了攻击，但攻击的规模令人担忧，因为它超过了Dyn攻击，后者的峰值为每秒1.2 TB。  </p>
+<p>对发起攻击的技术的分析显示，在某些方面，它比其他攻击更简单。虽然Dyn攻击是Mirai僵尸网络的产物，它需要恶意软件来感染数以千计的物联网设备，但GitHub攻击利用了运行Memcached内存缓存系统的服务器，该系统可以在响应简单请求时返回非常大的数据块。<br>Memcached仅用于在内部网络上运行的受保护服务器上，通常几乎没有安全机制来防止恶意攻击者欺骗IP地址，并向毫无戒心的受害者发送大量数据。不幸的是，成千上万的Memcached服务器正在开放的互联网上，并且它们在DDoS攻击中的使用率也出现了激增。说服务器被“劫持”是不公平的，因为他们会在不问任何问题的情况下欣然发送数据包。  </p>
+<p>在GitHub攻击几天后，另一场基于memecached的DDoS攻击以每秒1.7 TB的数据攻击了一家美国服务提供商。  </p>
+<p>Mirai僵尸网络的重要性在于，与大多数DDoS攻击不同，它利用了易受攻击的物联网设备，而不是PC和服务器。根据BI Intelligence的说法，到2020年人们认为将会有340亿互联网连接设备，而且大多数(240亿)都是物联网设备，这一点是特别可怕的。</p>
+<p>不幸的是，Mirai不会是最后一个使用IOT的僵尸网络。一项针对Akamai、Cloudflare、Flashpoint、谷歌、riskq和Cymru安全团队的调查，发现了一个规模类似的僵尸网络，名为WireX，由100个国家的10万部受到攻击的Android设备组成。针对内容提供商和内容交付网络的一系列大型DDoS攻击促使调查展开。  </p>
+<h2 id="如今的-DDoS-攻击"><a href="#如今的-DDoS-攻击" class="headerlink" title="如今的 DDoS 攻击"></a><strong>如今的 DDoS 攻击</strong></h2><p>尽管DDoS攻击的数量一直在下降，但它们仍然是一个重大威胁。卡巴斯基实验室(Kaspersky Labs)报告称，由于“异常活跃的9月”，除了第三季度外，2018年DDoS攻击的数量比前一年每季度都有所下降。总的来说，DDoS活动在2018年下降了13%。</p>
+<p>卡巴斯基表示，最近发现的像Torii和DemonBot这样能够发起DDoS攻击的僵尸网络令人担忧。Torii能够接管一系列物联网设备，被认为比Mirai更持久、更危险。DemonBot劫持Hadoop集群，这让它获得了更多的计算能力。</p>
+<p>另一个令人担忧的趋势是，像0x-booter这样新的DDoS启动平台的可用性。DDoS攻击利用了大约16000个感染了Bushido恶意软件(Mirai变种)的物联网设备。</p>
+<p>卡巴斯基报告确实找到了减少DDoS攻击量及其造成的损害的理由。它引用了全球法律执行机构在关闭DDoS运营商方面的有效性，这可能是攻击减少的一个原因。</p>
+<h2 id="DDoS-攻击常用的工具"><a href="#DDoS-攻击常用的工具" class="headerlink" title="DDoS 攻击常用的工具"></a><strong>DDoS 攻击常用的工具</strong></h2><p>通常，DDoS攻击者依赖于僵尸网络——由受恶意软件感染的系统集中控制的网络集合。这些被感染的端点通常是计算机和服务器，但越来越多的是物联网和移动设备。攻击者将通过识别他们发起网络钓鱼攻击、恶意攻击和其他大规模感染技术感染的脆弱系统来获取这些系统。越来越多的攻击者还会从构建僵尸网络的人那里租用这些网络。</p>
+<h2 id="三种类型的-DDoS-攻击"><a href="#三种类型的-DDoS-攻击" class="headerlink" title="三种类型的 DDoS 攻击"></a><strong>三种类型的 DDoS 攻击</strong></h2><p><strong>第一种：</strong> 使用大量虚假流量来拦截网站或服务器等资源的攻击，包括ICMP、UDP和欺骗数据包泛滥攻击。  </p>
+<p><strong>第二种：</strong> DDoS攻击是使用数据包来攻击网络基础设施和基础设施管理工具。这些协议攻击包括SYN flood和Smurf DDoS等。  </p>
+<p><strong>第三种：</strong> 一些DDoS攻击以组织的应用层为目标，通过向应用程序大量发送恶意编写的请求来执行。  </p>
+<p><strong>三种类型的目标是一样的:让在线资源变得迟钝或完全没有反应。</strong></p>
+<h2 id="DDoS-攻击相关时间轴"><a href="#DDoS-攻击相关时间轴" class="headerlink" title="DDoS 攻击相关时间轴"></a><strong>DDoS 攻击相关时间轴</strong></h2><h3 id="1996年"><a href="#1996年" class="headerlink" title="1996年"></a><strong>1996年</strong></h3><p>9月19日，CERT&#x2F;CC发布公告，使用源IP地址欺骗的 TCP SYN 洪水攻击处于增长趋势。</p>
+<p>9月19日至21日，互联网服务提供商PANIX一连三天遭到持续的DDoS攻击，影响到大量使用PANIX作电子服务平台的用户。</p>
+<h3 id="1997年"><a href="#1997年" class="headerlink" title="1997年"></a><strong>1997年</strong></h3><p>早期的DDoS工具从地下浮现，Trinoo、Tribe Flood、TFN2K、Shaft等工具进入人们的视野。当时使用的攻击资源为IRC、Eggdrop或是中了Sub7木马的肉鸡。</p>
+<h3 id="1998年"><a href="#1998年" class="headerlink" title="1998年"></a><strong>1998年</strong></h3><p>1月，通过反欺骗防护DDoS攻击的工具 RFC 2267 发布，并很快成为众多网络厂商采用的最佳实践。</p>
+<p>2月7日至20日，名为“黑手党男孩”的黑客对多个电子商务网站发动持续性DDoS攻击，据加拿大皇家警察和美国FBI的调查，黑手党男孩通过IRC吹嘘他的“战绩”。</p>
+<h3 id="2001年"><a href="#2001年" class="headerlink" title="2001年"></a><strong>2001年</strong></h3><p>黑手党男孩被判处8个月的“公开监禁”，一年的假释期，限制使用互联网，并处于少量罚金。</p>
+<p>8月15日，Smurf Amplifier Registry 发布，帮助发现和禁用在DDoS中被滥用的“Smurf Amplifier”。这种攻击使用假冒的广播地址发送ICMP，让受害者接收反馈的流量。到2012年，超过19.3万个网络得到修复。</p>
+<h3 id="2002年"><a href="#2002年" class="headerlink" title="2002年"></a><strong>2002年</strong></h3><p>10月19日至21日，大规模Smurf攻击根DNS服务器，并造成一些网站的瘫痪。最终攻击被击退，当时的攻击总流量达到900Mbps。</p>
+<h3 id="2003年"><a href="#2003年" class="headerlink" title="2003年"></a><strong>2003年</strong></h3><p>9月，美国国会推动网络安全立法，要求私人企业及上市公司上报他们的网络安全工作。</p>
+<h3 id="2007年"><a href="#2007年" class="headerlink" title="2007年"></a><strong>2007年</strong></h3><p>4月7日至5月10日，爱沙尼亚由于与俄罗斯的政治紧张关系，遭受了持续一个多月的DDoS攻击。</p>
+<h3 id="2008年"><a href="#2008年" class="headerlink" title="2008年"></a><strong>2008年</strong></h3><p>1月21日，匿名者首次高调发动DDoS攻击，反动教会逼迫网站删除汤姆·克鲁斯的采访视频。</p>
+<h3 id="2010年"><a href="#2010年" class="headerlink" title="2010年"></a><strong>2010年</strong></h3><p>12月3日至5日，由于阻止了维基解密的支付功能，在线支付及金融服务公司的网站被攻击。</p>
+<h3 id="2011年"><a href="#2011年" class="headerlink" title="2011年"></a><strong>2011年</strong></h3><p>4月20日至26日，索尼遭受DDoS攻击，目的是为了掩盖盗取索尼PS的用户数据。</p>
+<p>6月9日，美国中央情报局局长 Leon Panetta 表示：“下一次珍珠港事件，很可能是网络攻击致使美国的电网、安全和金融系统的瘫痪。”</p>
+<h3 id="2012年"><a href="#2012年" class="headerlink" title="2012年"></a><strong>2012年</strong></h3><p>3月24日，加拿大新民主党的竞选投票系统被攻击，投票时间和投票人数均受影响。</p>
+<p>9月4日，匿名者为抗议对阿桑奇的行为，攻击了美国和两国政府的网站，包括英国情报机构M15和M16。</p>
+<p>9月18日，伊斯兰教组织 Izz Ad-Din 为抗议美国博客写手发布的穆斯林视频，攻击美国网站，该行动命名为“Ababil”。</p>
+<h3 id="2013年"><a href="#2013年" class="headerlink" title="2013年"></a><strong>2013年</strong></h3><p>3月16日，国际反垃圾邮件组织(Spamhaus)因为其列出了网络犯罪者托管企业的阻断名单，而遭到了垃圾信息和僵尸网络高达300Gbps的攻击。</p>
+<p>5月13日，FBI表示，和银行展开更多的合作是探测网络攻击的关键。</p>
+<h3 id="2014年"><a href="#2014年" class="headerlink" title="2014年"></a><strong>2014年</strong></h3><p>7月28日，急剧下降的DDoS攻击与以色列和伊斯兰抵抗运动(Hamas)之间最终未达成停火协商相关。</p>
+<p>11月24日，在一名仅持有BB弹仿真手枪的12岁小男孩，Tamir Rice，在克利夫兰公园被当地警员击毙后，匿名者封闭了其在克利夫兰市的网站并上传了一段视频。</p>
+<p>12月25日，黑客组织“蜥蜴部队”(Lizard Squad)宣布对其在SONY的PlayStation Network和微软的Xbox live上发动的DDoS攻击负责。</p>
+<h3 id="2015年"><a href="#2015年" class="headerlink" title="2015年"></a><strong>2015年</strong></h3><p>12月15日，在土耳其发生击落俄罗斯军用飞机事件之后，土耳其遭到大规模DDoS攻击。</p>
+<h3 id="2016年"><a href="#2016年" class="headerlink" title="2016年"></a><strong>2016年</strong></h3><p>3月15日，匿名者宣布发动 #OpTrump 行动。</p>
+<p>8月，里约奥运官方网站遭受大规模、复杂的DDoS网络攻击，攻击峰会流量达到500Gbps。</p>
+<p>10月21日，提供动态DNS服务的Dyn DNS遭到了大规模DDoS攻击，攻击主要影响其位于美国东区的服务。此次攻击导致许多使用DynDNS服务的网站遭遇访问问题，其中包括 GitHub、Twitter、Airbnb、Reddit、Freshbooks、Heroku、SoundCloud,、Spotify 和 Shopify。攻击导致这些网站一度瘫痪，Twitter甚至出现了近24小时0访问的局面。</p>
+<h3 id="2018年"><a href="#2018年" class="headerlink" title="2018年"></a><strong>2018年</strong></h3><p>1月底，美国国防部遭受了大量垃圾邮件攻击，在随后的3月下旬，俄罗斯国防部也遭受了DDOS攻击。</p>
+<p>3月初，一系列针对GitHub和某服务提供商的攻击，此次攻击制造了破纪录的攻击流量 —— 超过1TB&#x2F;s。这些巨额流量通过利用Linux平台的缓存服务Memcached漏洞实现。</p>
+<p><strong>二十多年的时间里，随着黑客技术发展，利用物联网设备组建僵尸网络发起攻击的现象也日益严峻，墨者安全的网络安全之路可谓任重道远，如何解决日益增多的难题成为墨者安全未来发展的考验。而对于企业来说，提高网络安全意识，合理部署墨者安全高防产品，DDOS高防可在较大程度上降低DDoS攻击造成的损失。</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">STxw</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.stxwer.top/2021/10/24/DDoS1/">https://blog.stxwer.top/2021/10/24/DDoS1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.stxwer.top" target="_blank">STの星屋</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a><a class="post-meta__tags" href="/tags/DDoS/">DDoS</a></div><div class="post_share"><div class="addtoany"><div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_button_wechat"></a><a class="a2a_button_qzone"></a><a class="a2a_button_telegram"></a><a class="a2a_button_sina_weibo"></a><a class="a2a_button_email"></a><a class="a2a_button_copy_link"></a><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a></div></div><script async="async" src="https://static.addtoany.com/menu/page.js"></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://pic.imgdb.cn/item/618a8d252ab3f51d919581dc.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/618a8d252ab3f51d919581dc.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://pic.imgdb.cn/item/618a8d252ab3f51d919581d9.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/618a8d252ab3f51d919581d9.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/10/22/IDM1/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/6172cf9a2ab3f51d911c90f0.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">IDM + 暴力猴实现百度网盘满速下载</div></div></a></div><div class="next-post pull-right"><a href="/2021/10/24/Attack/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/61756bf82ab3f51d914c14df.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">浅谈主动攻击</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/10/24/Attack/" title="浅谈主动攻击"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/61756bf82ab3f51d914c14df.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-03-04</div><div class="title">浅谈主动攻击</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/6188b6a92ab3f51d91af3b9c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">STxw</div><div class="author-info__description">STxw的经验分享站</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/279234244"><i class="fas fa-star"></i><span>关注我吧</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/aceak" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://gitee.com/aceak" target="_blank" title="Gitee"><i class="fab fa-gitlab"></i></a><a class="social-icon" href="mailto:2060445247@qq.com" target="_blank" title="给我发邮件"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS 链接"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到STの星屋，更多精彩内容尽在这里！！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/10/24/Attack/" title="浅谈主动攻击"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/61756bf82ab3f51d914c14df.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅谈主动攻击"/></a><div class="content"><a class="title" href="/2021/10/24/Attack/" title="浅谈主动攻击">浅谈主动攻击</a><time datetime="2021-10-24T04:00:00.000Z" title="发表于 2021-10-24 12:00:00">2021-10-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/24/DDoS1/" title="关于DDoS攻击的一些小知识"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/61756b202ab3f51d914b03eb.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于DDoS攻击的一些小知识"/></a><div class="content"><a class="title" href="/2021/10/24/DDoS1/" title="关于DDoS攻击的一些小知识">关于DDoS攻击的一些小知识</a><time datetime="2021-10-24T04:00:00.000Z" title="发表于 2021-10-24 12:00:00">2021-10-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/22/IDM1/" title="IDM + 暴力猴实现百度网盘满速下载"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/6172cf9a2ab3f51d911c90f0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IDM + 暴力猴实现百度网盘满速下载"/></a><div class="content"><a class="title" href="/2021/10/22/IDM1/" title="IDM + 暴力猴实现百度网盘满速下载">IDM + 暴力猴实现百度网盘满速下载</a><time datetime="2021-10-22T14:00:00.000Z" title="发表于 2021-10-22 22:00:00">2021-10-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/21/Apps/" title="星雾的软件库"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/61704eb12ab3f51d911a0194.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="星雾的软件库"/></a><div class="content"><a class="title" href="/2021/10/21/Apps/" title="星雾的软件库">星雾的软件库</a><time datetime="2021-10-20T17:00:00.000Z" title="发表于 2021-10-21 01:00:00">2021-10-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/01/10.01/" title="国庆节快乐"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.loli.net/2021/10/02/DU9xbElFjeGrCk5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="国庆节快乐"/></a><div class="content"><a class="title" href="/2021/10/01/10.01/" title="国庆节快乐">国庆节快乐</a><time datetime="2021-09-30T16:00:00.000Z" title="发表于 2021-10-01 00:00:00">2021-10-01</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://pic.imgdb.cn/item/61756b5d2ab3f51d914b4afd.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2022 By STxw</div><div class="footer_custom_text">Hi, welcome to <a href="https://blog.stxwer.top/">STxw</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-qqnx65gv6-stxw.vercel.app',
+      region: 'ap-hongkong',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.vemoji)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-qqnx65gv6-stxw.vercel.app',
+      region: 'ap-hongkong',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      document.getElementById('twikoo-count').innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="true" data-text="富强,民主,文明,和谐,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="13px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><!-- hexo injector body_end end --></body></html>
